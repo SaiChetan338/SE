@@ -13,9 +13,11 @@ def main():
 
     time_values = np.linspace(0, 10, 100)
     temperature_values = quadratic_model(time_values, a, b, c)
+    
 
     plt.figure(figsize=(10, 6))
-    plt.plot(time_values, temperature_values, label='User Input Coefficients')
+    plt.plot(time_values, temperature_values, label=f'a={a}, b={b}, c={c}')
+    
     plt.xlabel('Time')
     plt.ylabel('Temperature')
     plt.title('Quadratic Model With User Input')
